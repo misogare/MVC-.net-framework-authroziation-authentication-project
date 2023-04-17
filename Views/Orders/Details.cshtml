@@ -1,0 +1,42 @@
+﻿@model moore.Models.Order
+
+<!-- create page to detail of items -->
+<!-- using the order model -->
+<!-- setting title -->
+@{
+    ViewData["Title"] = "Details";
+}
+<!-- header -->
+<h1>Details</h1>
+
+<div>
+    <h4>Order</h4>
+    <hr />
+    <dl class="row">
+        <!-- the order date   -->
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.OrderDate)
+        </dt>
+        <!-- the order date  -->
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.OrderDate)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.OrderTotal)
+        </dt>
+        <!-- the order Total  -->
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.OrderTotal)
+        </dd>
+
+
+
+    </dl>
+</div>
+
+
+<div>
+    <!--go back options   -->
+    <a asp-action="Edit" asp-route-id="@Model?.OrderID">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

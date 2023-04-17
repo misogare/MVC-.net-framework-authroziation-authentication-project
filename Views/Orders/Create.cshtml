@@ -1,0 +1,27 @@
+﻿@model Order
+
+<h2>Create Order</h2>
+
+<form asp-action="Create">
+    <div class="form-group">
+        <label asp-for="OrderDate" class="control-label"></label>
+        <input asp-for="OrderDate" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label asp-for="OrderTotal" class="control-label"></label>
+        <input asp-for="OrderTotal" class="form-control" />
+    </div>
+ 
+
+    
+
+    <div class="form-group">
+        <input type="submit" value="Create" class="btn btn-default" />
+    </div>
+</form>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

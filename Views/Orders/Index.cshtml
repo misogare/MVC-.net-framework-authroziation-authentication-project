@@ -1,0 +1,49 @@
+﻿@model IEnumerable<moore.Models.Order>
+<!-- create page to view items -->
+<!-- ienumerable of order so foreach can be used to itterate  -->
+<!-- setting title -->
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+<!-- create action to redirect to create page  -->
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+         
+            <th>
+                @Html.DisplayNameFor(model => model.OrderDate)
+               
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.OrderTotal)
+
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+                <!-- get the items from order model and itterate to print each item in one row -->
+            <td>
+                @Html.DisplayFor(modelItem => item.OrderDate)
+                    
+            </td>
+            <td>
+                    @Html.DisplayFor(modelItem => item.OrderTotal)
+            </td>
+            <td>
+                    <!-- show the options for each element dependant on item  -->
+                <a asp-action="Edit" asp-route-id="@item.OrderID">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.OrderID">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.OrderID">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

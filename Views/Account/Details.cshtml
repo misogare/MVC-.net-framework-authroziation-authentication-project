@@ -1,0 +1,47 @@
+﻿@model ApplicationUser
+<!-- create page to detail of items -->
+<!-- using the order model -->
+<!-- setting title -->
+@{
+    ViewData["Title"] = "Details";
+}
+<!-- header -->
+<h1>Details</h1>
+
+<table class="table">
+    <tbody>
+        <tr>
+            <td><strong>ID:</strong></td>
+            <td>@Model.Id</td>
+        </tr>
+        <tr>
+            <td><strong>First Name:</strong></td>
+            <td>@Model.FirstName</td>
+        </tr>
+        <tr>
+            <td><strong>Last Name:</strong></td>
+            <td>@Model.LastName</td>
+        </tr>
+        <tr>
+            <td><strong>Email:</strong></td>
+            <td>@Model.Email</td>
+        </tr>
+        <tr>
+            <td><strong>Address:</strong></td>
+            <td>@Model.Address</td>
+        </tr>
+        <tr>
+            <td><strong>Username:</strong></td>
+            <td>@Model.UserName</td>
+        </tr>
+        <tr>
+            <td><strong>Phone:</strong></td>
+            <td>@Model.PhoneNumber</td>
+        </tr>
+    </tbody>
+</table>
+<div>
+    <!--go back options   -->
+    <a asp-action="Edit" asp-route-id="@Model?.Id">Edit</a> |
+    <a asp-action="Users">Back to List</a>
+</div>
