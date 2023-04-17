@@ -14,9 +14,9 @@ The application is developed using the C# language and the MVC framework. The En
       Open the project in your preferred IDE that supports C# and the MVC framework
       Restore the NuGet packages
       Run the database migration using the following command in Package Manager Console:
-      ""
+      """
       Update-Database
-      ""
+      """
       Run the application
 ## Usage
     Login with the admin credentials
