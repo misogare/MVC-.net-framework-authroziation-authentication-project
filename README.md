@@ -1,5 +1,5 @@
 # NeXen Technologies Business System Web Application
-**This project is developed for NeXen Technologies to manage their operations using a centralized web application.
+** This project is developed for NeXen Technologies to manage their operations using a centralized web application.
 The application is developed using the C# language and the MVC framework. The Entity Framework is used as the ORM tool to interact with the database.
 **
 ##Features
